@@ -1,0 +1,243 @@
+@charset "UTF-8";
+/* styles.css */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: url('https://images.pexels.com/photos/256559/pexels-photo-256559.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+  }
+  
+/* General Header Styling */
+header {
+    background: linear-gradient(to right, #72a585, #8fd3f4);
+    color: navy;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+/* Menu Icon */
+.menu-icon {
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Welcome Message Styling */
+.welcome-message {
+    font-size: 24px;
+    color:black;
+    text-align: center;
+    font-weight: bold;
+    animation: fadeIn 2s ease-out, textGlow 2s infinite alternate; /* Animations */
+    flex: 1; /* Center the text in the header */
+}
+
+/* My Collections Link Styling */
+.my-collections-container {
+    display: flex;
+    align-items: center;
+}
+
+.my-collections-link {
+    padding: 10px 20px;
+    background: linear-gradient(to right, #f093fb, #f5576c);
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+    animation: slideInRight 1.5s ease-out;
+    cursor: pointer;
+}
+
+.my-collections-link:hover {
+    background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+    transform: scale(1.1) rotate(5deg); /* Slight zoom and rotate effect */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    animation: bounce 0.6s ease-in-out; /* Bounce effect on hover */
+}
+
+/* Animations */
+
+/* Fade-in animation for the welcome message */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Glow effect for the welcome message text */
+@keyframes textGlow {
+    0% {
+        text-shadow: 0 0 10px #8A2BE2, 0 0 20px #8A2BE2, 0 0 30px #6a0dad;
+    }
+    100% {
+        text-shadow: 0 0 20px #8A2BE2, 0 0 40px #6a0dad, 0 0 50px #5d3fd3;
+    }
+}
+
+/* Slide-in animation for the "My Collections" link */
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Bounce effect for the "My Collections" link on hover */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+  
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 300px;
+    height: 100%;
+    background: linear-gradient(to bottom, #6dd5ed, #2193b0);
+    color: white;
+    padding-top: 60px;
+    transition: left 0.4s ease-in-out;
+    z-index: 1000;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  .sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: none;
+    z-index: 999;
+  }
+  
+  .search-bar {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    gap: 10px;
+  }
+  
+  .search-bar input {
+    width: 50%; /* Reduced width for a more compact look */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px 0 0 8px;
+    font-size: 14px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .search-bar button {
+    padding: 10px;
+    background: #84fab0;
+    color: black;
+    border: none;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+    font-size: 14px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease;
+  }
+  
+  .search-bar button:hover {
+    background: #8fd3f4;
+  }
+  
+  .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .card {
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+  .card p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .borrow-button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+    color:black;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s ease;
+  }
+  
+  .borrow-button:hover {
+    background: #8fd3f4;
+  }
+  

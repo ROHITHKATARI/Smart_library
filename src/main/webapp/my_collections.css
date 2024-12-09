@@ -1,0 +1,160 @@
+@charset "UTF-8";
+/* Reset and general styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: url('./images/StudentBorrowed.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #333;
+}
+
+/* Header styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 20px;
+}
+
+.header .logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffcc00;
+}
+
+.nav-links a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #ffcc00;
+    color: black;
+    transform: scale(1.1);
+}
+
+.nav-links .logout-btn {
+    background-color: #e53935;
+}
+
+.nav-links .logout-btn:hover {
+    background-color: #c62828;
+}
+
+/* Main content styles */
+.main-content {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.4);
+    margin: 20px auto;
+    max-width: 1100px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1.2s ease-in-out;
+    text-align: center;
+}
+
+/* Center the heading */
+.main-content h1 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Table styles */
+.borrowed-books-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Gradient styles for table rows */
+.borrowed-books-table thead {
+    background: linear-gradient(to right, #ff7eb3, #ff758c, #ff4561);
+    color: white;
+}
+
+.borrowed-books-table th {
+    padding: 12px 15px;
+    font-size: 18px;
+}
+
+.borrowed-books-table td {
+    text-align: left;
+    padding: 12px 15px;
+    font-size: 16px;
+    background: linear-gradient(to right, #f9e7ff, #fdf7ff);
+    border-bottom: 1px solid #ddd;
+}
+
+.borrowed-books-table tr:nth-child(even) td {
+    background: linear-gradient(to right, #e0f7fa, #f1f8ff);
+}
+
+.borrowed-books-table tr:nth-child(odd) td {
+    background: linear-gradient(to right, #fff3e0, #fffaf3);
+}
+
+/* Buttons */
+.borrowed-books-table .return-btn,
+.borrowed-books-table .read-btn {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.borrowed-books-table .return-btn:hover {
+    background-color: #388e3c;
+}
+
+.borrowed-books-table .read-btn {
+    background-color: #0288d1;
+}
+
+.borrowed-books-table .read-btn:hover {
+    background-color: #0277bd;
+}
+
+/* No books message */
+.no-books {
+    text-align: center;
+    color: #888;
+    font-style: italic;
+    padding: 20px;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

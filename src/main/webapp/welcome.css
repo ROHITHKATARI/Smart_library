@@ -1,0 +1,98 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.hero-section {
+    text-align: center;
+    padding: 5em 2em;
+    background: 
+        url('./images/Welcome.webp') no-repeat center center/cover;
+    color: rgb(100, 50, 130);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 10px solid #ddd;
+}
+
+.tagline {
+    font-size: 70px;
+    font-weight: bold;
+    display: inline-block;
+    padding: 0.5em 1.5em;
+    margin-bottom: 1em;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #FF6347, #87CEEB);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color:#B76E79;
+}
+
+
+h1 {
+    font-size: 90px;
+    margin-bottom: 0.5em;
+    text-align: center;
+    line-height: 1.2;
+}
+
+p {
+    color: black;
+    font-size: 28px;
+    margin-bottom: 2em;
+    line-height: 1.5;
+    max-width: 80%;
+    text-align: center;
+}
+
+.button-container {
+    display: flex;
+    gap: 2em;
+    margin-top: 2em;
+}
+
+.btn-access {
+    display: inline-block;
+    padding: 1.3em 3em;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.admin-btn {
+    background: linear-gradient(45deg, #ff9a76, #ff6347);
+}
+
+.admin-btn:hover {
+    background: linear-gradient(45deg, #ff6347, #ff9a76);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 99, 71, 0.5);
+}
+
+.student-btn {
+    background: linear-gradient(45deg, #87cefa, #4682b4);
+}
+
+.student-btn:hover {
+    background: linear-gradient(45deg, #4682b4, #87cefa);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(70, 130, 180, 0.5);
+}
